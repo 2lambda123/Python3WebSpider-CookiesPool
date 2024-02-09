@@ -58,7 +58,7 @@ def count(website):
     """
     g = get_conn()
     count = getattr(g, website + '_cookies').count()
-    return json.dumps({'status': '1', 'count': count})
+    return (json.dumps({'status': '1', 'count': count}), {'Content-Type': 'application/json'})
 
 
 if __name__ == '__main__':
