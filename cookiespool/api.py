@@ -59,7 +59,7 @@ def add(website, username, password):
     g = get_conn()
     print(username, password)
     getattr(g, website + '_accounts').set(username, password)
-    return json.dumps({'status': '1'})
+    return (json.dumps({'status': '1'}), {'Content-Type': 'application/json'})
 
 
 @app.route('/<website>/count')
