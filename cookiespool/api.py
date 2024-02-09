@@ -9,6 +9,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    """"This function returns a welcome message for the Cookie Pool System webpage."
+    Parameters:
+        - None
+    Returns:
+        - str: A welcome message in HTML format.
+    Processing Logic:
+        - Returns a welcome message in HTML.
+        - No parameters are required.
+        - Can be used as a landing page for the Cookie Pool System.
+        - Can be used to display a welcome message to users."""
+    
     return '<h2>Welcome to Cookie Pool System</h2>'
 
 
